@@ -1,0 +1,278 @@
+/* IMPORT FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400&display=swap');
+/* IMPORT FONTES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-div {
+    background-color: #2C74B3;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.relogioo {
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    border: #2C74B3 solid 5px;
+    border-radius: 30px;
+}
+
+.piscando {
+    animation: pisca 1s infinite;
+}
+
+@keyframes pisca {
+    0% {
+        border: #2C74B3 solid 5px
+    }
+
+    50% {
+        border: #205295 solid 5px;
+        background: #0a264749;
+    }
+
+    100% {
+        border: #205295 solid 5px
+    }
+}
+
+.relogioo:hover {
+    border: #0e315f solid 5px;
+    background: #0a264749;
+    cursor: default;
+}
+
+.centro-main {
+    background-color: #2166a3;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.centro-main span {
+    color: white;
+    font-size: 150px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.container-right {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-div {
+    height: 88%;
+    background-color: #205295;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 30px;
+}
+
+.header-task {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.header-task span::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.623);
+    position: absolute;
+}
+
+.header-task span {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+    margin-left: 10px;
+}
+
+.header-task p {
+    color: rgba(255, 255, 255, 0.623);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box-task {
+    min-width: 280px;
+    height: 100%;
+    padding-right: 10px;
+    overflow-y: auto;
+}
+
+.task {
+    width: 280px;
+    min-height: 20px;
+
+    padding-inline: 20px;
+    padding-block: 8px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    overflow-wrap: anywhere;
+
+    background: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.521);
+    animation: 1s all;
+}
+
+
+
+.checado {
+    background: #2166a3;
+}
+
+.checado span {
+    color: rgb(138, 0, 0);
+}
+
+.checado p {
+    color: #0e315f;
+    text-decoration: line-through;
+}
+
+.task p {
+    margin-left: 10px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    width: 100%;
+    cursor: default;
+}
+
+.task button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #0e315f;
+}
+
+.task-inputT {
+    min-height: 12%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0e315f;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    position: relative;
+}
+
+.task-inputT::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #205295;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.task-inputT textarea {
+    min-height: 20px;
+    width: 300px;
+
+    color: #0A2647;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+
+    padding-inline: 20px;
+    padding-right: 35px;
+    padding-block: 6px;
+    border-radius: 15px;
+
+    background: white;
+    border: #2C74B3 5px solid;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.521);
+    outline: none;
+    resize: none;
+}
+
+.task-inputT button {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.bttADD {
+    position: absolute;
+    right: 45px;
+    border: none;
+    background: none;
+    color: #0e315f;
+    border-radius: 50%;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons a {
+    display: flex;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+    background-color: #2C74B3;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.start.active,
+.stop.active,
+.pomodoro.active,
+.descanso.active,
+.descansoL.active {
+    background-color: #0A2647;
+    color: white;
+}
+
+.stop.hide {
+    display: none;
+}
+
+.start.hide {
+    display: none;
+}
