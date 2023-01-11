@@ -249,6 +249,15 @@ main {
     align-items: center;
 }
 
+.start,
+.stop {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    margin-inline: 20px;
+}
+
 .buttons a {
     display: flex;
     text-decoration: none;
@@ -275,4 +284,19 @@ main {
 
 .start.hide {
     display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 900px) {
+
+    main {
+        display: flex;
+        justify-content: baseline;
+        flex-direction: column;
+    }
+
+    .container-right {
+        display: none;
+    }
 }
