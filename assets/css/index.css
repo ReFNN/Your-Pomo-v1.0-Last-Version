@@ -422,4 +422,8 @@ div.hideunhide {
     div.hideunhide {
         display: block;
     }
+    
+    .centro-main span {
+        font-size: 7.5rem;
+    }
 }
