@@ -20,11 +20,46 @@ main {
 }
 
 .main-div {
-    background-color: #2C74B3;
+    background-image: url('../img/background_Images/background_ImgID1.png');
+    background-size: cover;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+
+    width: 100%;
+}
+
+.sobre span {
+    font-family: 'Poppins', sans-serif;
+    color: #0A2647;
+    font-size: 1.5rem;
+
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sobre p {
+    text-align: center;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    color: #BFDAF2;
 }
 
 .relogioo {
@@ -41,7 +76,8 @@ main {
 
 @keyframes pisca {
     0% {
-        border: #2C74B3 solid 5px
+        border: #2C74B3 solid 5px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.521);
     }
 
     50% {
@@ -61,19 +97,28 @@ main {
 }
 
 .centro-main {
-    background-color: #2166a3;
+    background-color: #145c9c;
     height: 100%;
     width: 400px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column
+    flex-direction: column;
+
 }
 
-.centro-main span {
+.relogioo {
     color: white;
     font-size: 150px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.logodiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
 }
 
 .container-right {
@@ -311,6 +356,9 @@ a.hide {
     display: flex;
     align-items: center;
     position: absolute;
+
+    box-shadow: -2px 13px 10px rgb(0, 0, 0);
+
     right: 0;
     margin-top: 20px;
 
@@ -371,6 +419,11 @@ div.hideunhide {
 
     .centro-main {
         width: 90%;
+    }
+
+    .logodiv {
+        margin-top: 90px;
+        top: 0;
     }
 
     .container-right {
