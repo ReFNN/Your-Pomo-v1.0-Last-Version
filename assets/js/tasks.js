@@ -71,13 +71,15 @@ function updateTasks() {
 }
 
 function loadTasks() {
-
-    ulBox.innerHTML = "";
-    tasks = JSON.parse(localStorage.getItem("tasklist")) ?? [];
-    tasks.forEach((task, i) => {
-        insertTela(task.conteudo, task.status, i)
-    })
-
+    if (tasks.length == 0) {
+        ulBox.innerHTML = '<div class="task"><p>Você ainda não adicionou nenhuma tarefa. 😢</p></div><div class="task"><p>You haven' + "'" + 't added any tasks yet. 😢</p></div><div class="task"><p>Vous n' + "'" + 'avez pas encore ajouté de tâches. 😢</p></div>';
+    } else {
+        ulBox.innerHTML = "";
+        tasks = JSON.parse(localStorage.getItem("tasklist")) ?? [];
+        tasks.forEach((task, i) => {
+            insertTela(task.conteudo, task.status, i)
+        })
+    }
     countTasks.textContent = tasks.length;
 }
 
