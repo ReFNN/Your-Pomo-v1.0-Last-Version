@@ -20,6 +20,10 @@
         }
         window.addEventListener("load", function () { hideAddressBar(); });
         window.addEventListener("orientationchange", function () { hideAddressBar(); });
+        
+        if(navigator.userAgent.match(/Android/i)){
+            window.scrollTo(0,1);
+        }
     </script>
     <header>
 
