@@ -5,6 +5,7 @@
     <title>⏲️Timer Pomodoro</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
@@ -27,9 +28,14 @@
                     <a id="btt-stop" href="" class="stop hide active">PARAR</a>
                 </div>
             </div>
-
+            <div class="divOpen hideunhide">
+                <button class="bttOpen" id="bttopenn" onclick="openTasks()">
+                    <span class="material-symbols-outlined s">open_in_full</span>
+                    <p>Lista de Tarefas</p>
+                </button>
+            </div>
         </div>
-        <div class="container-right">
+        <div class="container-right hide">
             <div class="right-div">
                 <div class="header-task">
                     <span>Tarefas</span>
@@ -45,6 +51,11 @@
                         class="material-symbols-outlined">
                         add_circle
                     </span></button>
+            </div>
+            <div class="divClose">
+                <button class="bttClose" id="bttclosee" onclick="closeTasks()">
+                    <span class="material-symbols-outlined t">close</span>
+                </button>
             </div>
         </div>
     </main>

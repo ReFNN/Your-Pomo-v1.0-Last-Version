@@ -278,17 +278,78 @@ main {
     color: white;
 }
 
-.stop.hide {
+
+
+a.hide {
     display: none;
 }
 
-.start.hide {
+.divClose {
+    display: flex;
+
+
+    width: 10%;
+    height: 50px;
+}
+
+.bttClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+
+    background: #205295;
+    border: none;
+    color: white;
+    font-size: 1px;
+    border-bottom-left-radius: 10px;
+}
+
+.divOpen {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+
+    height: 50px;
+}
+
+.bttOpen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    padding-block: 30px;
+    padding-inline: 20px;
+    width: 100%;
+    height: 100%;
+
+    background: #205295;
+    border: none;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.bttOpen p {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+div.hideunhide {
     display: none;
 }
 
 /* RESPONSIVIDADE */
 
-@media screen and (min-width: 900px) {
+@media only screen and (max-width: 768px) {
 
     main {
         display: flex;
@@ -296,7 +357,69 @@ main {
         flex-direction: column;
     }
 
+    .material-symbols-outlined.t {
+        font-size: 40px;
+    }
+
+    .material-symbols-outlined.e {
+        font-size: 35px;
+    }
+
+    .material-symbols-outlined.s {
+        font-size: 28px;
+        margin-right: 5px;
+    }
+
+    .centro-main {
+        width: 90%;
+    }
+
     .container-right {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        flex-direction: row-reverse;
+        background-color: #001b38ec;
+    }
+
+    .right-div {
+        height: 100%;
+        width: 85%;
+        box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    }
+
+    .box-task {
+        width: 100%;
+    }
+
+    .task {
+        width: 100%;
+    }
+
+    .task p {
+        font-size: 20px;
+    }
+
+    .task-inputT {
+        position: absolute;
+        bottom: 0;
+        width: 85%;
+    }
+
+    .task-inputT textarea {
+        width: 100%;
+        height: 60px;
+
+        padding-top: 13px;
+        border-radius: 25px;
+        margin-inline: 30px;
+    }
+
+    .container-right.hide {
         display: none;
+    }
+
+    div.hideunhide {
+        display: block;
     }
 }

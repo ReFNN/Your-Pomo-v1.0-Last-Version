@@ -2,7 +2,9 @@ var inputTask = document.querySelector(".txtInpt");
 var bttTask = document.querySelector(".bttADD");
 var countTasks = document.querySelector('.counter');
 var ulBox = document.querySelector(".box-task");
-const cli = document.createElement("li");
+
+
+var cli = document.createElement("li");
 var tasks = [];
 
 //BOTÕES EVENT
@@ -32,6 +34,32 @@ bttTask.addEventListener('click', (event) => {
     }
 });
 
+
+var bttClose = document.querySelector("#bttclosee");
+
+function closeTasks() {
+    var rightContainer = document.querySelector(".container-right");
+    if (rightContainer.classList.contains('hide')) {
+        rightContainer.classList.remove('hide');
+    } else {
+        rightContainer.classList.add('hide');
+    }
+};
+
+var bttOpen = document.querySelector("#bttopenn");
+
+function openTasks() {
+    var rightContainer = document.querySelector(".container-right");
+    if (rightContainer.classList.contains('hide')) {
+        rightContainer.classList.remove('hide');
+    } else {
+        rightContainer.classList.add('hide');
+    }
+};
+
+/*FUNÇÕES*/
+
+
 function insertTask(conteudo, status) {
     tasks.push({ conteudo, status });
     updateTasks();
@@ -43,21 +71,19 @@ function updateTasks() {
 }
 
 function loadTasks() {
-    if (tasks.length == 0) {
-        cli.innerHTML = '<div class="task"><p>Você ainda não adicionou nenhuma tarefa!🗒️</p></div><div class="task"><p>Adicione abaixo sua primeira tarefa agora mesmo!✍️</p></div>';
-        ulBox.appendChild(cli);
-    } else {
-        ulBox.innerHTML = "";
-        tasks = JSON.parse(localStorage.getItem("tasklist")) ?? [];
-        tasks.forEach((task, i) => {
-            insertTela(task.conteudo, task.status, i)
-        })
-    }
+
+    ulBox.innerHTML = "";
+    tasks = JSON.parse(localStorage.getItem("tasklist")) ?? [];
+    tasks.forEach((task, i) => {
+        insertTela(task.conteudo, task.status, i)
+    })
+
     countTasks.textContent = tasks.length;
 }
 
 function insertTela(txtTask, sttsTask, i) {
-    cli.innerHTML = '<div class="task" data=' + i + '> <input type="checkbox" ' + sttsTask + ' data-i=' + i + ' onchange="checar(this, ' + i + ')";> <p data-si=' + i + '>' + txtTask + '</p> <button onclick="removeTask(' + i + ')" data-i=' + i + ' class="bttRemoveTask"><span class="material-symbols-outlined">delete</span></button></div>';
+    var cli = document.createElement("li");
+    cli.innerHTML = '<div class="task" data=' + i + '> <input type="checkbox" ' + sttsTask + ' data-i=' + i + ' onchange="checar(this, ' + i + ')";> <p data-si=' + i + '>' + txtTask + '</p> <button onclick="removeTask(' + i + ')" data-i=' + i + ' class="bttRemoveTask"><span class="material-symbols-outlined e">delete</span></button></div>';
     ulBox.appendChild(cli);
 
     if (sttsTask) {
