@@ -11,8 +11,7 @@
 
 body {
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    height: 100vh;
 }
 
 main {
@@ -73,7 +72,7 @@ main {
 
 .centro-main span {
     color: white;
-    font-size: 9rem;
+    font-size: 150px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
@@ -421,9 +420,5 @@ div.hideunhide {
 
     div.hideunhide {
         display: block;
-    }
-    
-    .centro-main span {
-        font-size: 7.5rem;
     }
 }

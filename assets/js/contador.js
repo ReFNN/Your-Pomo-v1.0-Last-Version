@@ -2,6 +2,12 @@ var setDuracao = 60 * 25; // converte para segundos
 var duracao;
 var timerON;
 
+// AUDIOS
+var audioFimContador = document.getElementById('audio1');
+var audioFimPausaCurta = document.getElementById('audio2');
+var audioFimPausaLonga = document.getElementById('audio3');
+var audio = audioFimContador;
+
 //BOTÕES MENU
 var bttPomodoro = document.querySelector("#btt-pomodoro");
 var bttDescanso = document.querySelector("#btt-descanso");
@@ -33,9 +39,8 @@ function startTimer(duracao, display) {
 
             if (--timer < 0) {
                 timer = duracao;
-
             }
-            if (segundos == 0) {
+            if ((minutos + segundos) == 0) {
                 clearInterval(timerON);
                 timerON = null;
                 duracao = setDuracao;
@@ -43,6 +48,8 @@ function startTimer(duracao, display) {
                 display.textContent = minutos + ":" + segundos;
                 bttStart.classList.remove("hide");
                 bttStop.classList.add("hide");
+                audio.play();
+                stopTimer(duracao, display);
             }
         }, 1000);
 
@@ -106,9 +113,10 @@ bttPomodoro.addEventListener('click', (event) => {
         bttPomodoro.classList.add("active");
     }
 
-    setDuracao = 60 * 20; // converte para segundos
+    setDuracao = 60 * 25; // converte para segundos
     duracao = setDuracao;
     stopTimer(duracao, display);
+    audio = audioFimContador;
 });
 
 // DESCANSO BUTTON
@@ -130,6 +138,7 @@ bttDescanso.addEventListener('click', (event) => {
     setDuracao = 60 * 5; // converte para segundos
     duracao = setDuracao;
     stopTimer(duracao, display);
+    audio = audioFimPausaCurta;
 });
 
 // DESCANSO LONGO BUTTON
@@ -151,4 +160,5 @@ bttDescansoL.addEventListener('click', (event) => {
     setDuracao = 60 * 15; // converte para segundos
     duracao = setDuracao;
     stopTimer(duracao, display);
+    audio = audioFimPausaLonga;
 });
