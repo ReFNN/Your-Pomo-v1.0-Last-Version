@@ -21,6 +21,7 @@ main {
 
 .main-div {
     background-image: url('../img/background_Images/background_ImgID1.png');
+    background-color: #2C74B3;
     background-size: cover;
     height: 100vh;
     width: 100%;
