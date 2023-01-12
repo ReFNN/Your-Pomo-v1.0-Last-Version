@@ -45,7 +45,7 @@ main {
     width: 100%;
 }
 
-.sobre span {
+.obj {
     font-family: 'Poppins', sans-serif;
     color: #0A2647;
     font-size: 1.5rem;
@@ -119,6 +119,27 @@ main {
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
+}
+
+.devby {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.devby a {
+    text-decoration: none;
+}
+
+.devby p {
+    font-family: 'Poppins', sans-serif;
+    color: #0A2647;
+    font-size: 1.2rem;
+    text-decoration: underline;
 }
 
 .container-right {
